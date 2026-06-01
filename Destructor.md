@@ -21,9 +21,20 @@ The program defines a class `Demo` with:
    - Create an instance of the `Demo` class.
    - Delete the object using the `del` keyword.
 ## Program
-Add code Here
+class Demo:
+    def __init__(self):
+        self.name = "Python"
+        print("Constructor Called")
+
+    def __del__(self):
+        print("Destructor Called")
+
+obj = Demo()
+del obj
 
 ## 🧪 Output
-
+Constructor Called
+Destructor Called
 ## Result
 
+The program demonstrates the use of a constructor and destructor in Python. The constructor is called when the object is created, and the destructor is called when the object is deleted using del.
