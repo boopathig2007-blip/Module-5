@@ -31,6 +31,70 @@ To write a Python program that uses **Hierarchical Inheritance** to input and di
 5. Display collected information using class methods.
 
 ## Program
-Add code here
+class Details:
+    def get_details(self):
+        self.name = input("Enter Name: ")
+        self.age = int(input("Enter Age: "))
+
+class Employee(Details):
+    def get_employee(self):
+        self.emp_id = input("Enter Employee ID: ")
+        self.department = input("Enter Department: ")
+
+    def display_employee(self):
+        print("\n--- Employee Details ---")
+        print("Name:", self.name)
+        print("Age:", self.age)
+        print("Employee ID:", self.emp_id)
+        print("Department:", self.department)
+
+class Patient(Details):
+    def get_patient(self):
+        self.patient_id = input("Enter Patient ID: ")
+        self.disease = input("Enter Disease: ")
+
+    def display_patient(self):
+        print("\n--- Patient Details ---")
+        print("Name:", self.name)
+        print("Age:", self.age)
+        print("Patient ID:", self.patient_id)
+        print("Disease:", self.disease)
+
+# Employee Details
+e = Employee()
+e.get_details()
+e.get_employee()
+e.display_employee()
+
+# Patient Details
+p = Patient()
+p.get_details()
+p.get_patient()
+p.display_patient()
+
 ## Sample Output
+Enter Name: Raj
+Enter Age: 30
+Enter Employee ID: E101
+Enter Department: IT
+
+--- Employee Details ---
+Name: Raj
+Age: 30
+Employee ID: E101
+Department: IT
+
+Enter Name: Kumar
+Enter Age: 45
+Enter Patient ID: P201
+Enter Disease: Fever
+
+--- Patient Details ---
+Name: Kumar
+Age: 45
+Patient ID: P201
+Disease: Fe 
+
+Result
+The program successfully demonstrates Hierarchical Inheritance in Python, where the classes Employee and Patient inherit common attributes and methods from the parent class Details while maintaining their own specific properties and functionalities.
 
