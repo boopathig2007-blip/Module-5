@@ -24,6 +24,37 @@ To write a Python program to calculate **Add, Sub & Division** using **Multiple 
    - Display the results of the three operations.
 
 ## 💻 Program 
-Add code here
+class Addition:
+    def add(self, a, b):
+        print("Addition =", a + b)
+
+class Subtraction:
+    def subtract(self, a, b):
+        print("Subtraction =", a - b)
+
+class Division(Addition, Subtraction):
+    def divide(self, a, b):
+        if b != 0:
+            print("Division =", a / b)
+        else:
+            print("Division by zero is not possible")
+
+obj = Division()
+
+a = int(input("Enter First Number: "))
+b = int(input("Enter Second Number: "))
+
+obj.add(a, b)
+obj.subtract(a, b)
+obj.divide(a, b)
 ## Output Example
+Enter First Number: 20
+Enter Second Number: 5
+
+Addition = 25
+Subtraction = 15
+Division = 4.0
+
+ Result:
+ The program successfully demonstrates Multiple Inheritance in Python. The Division class inherits methods from both Addition and Subtraction classes and performs Addition, Subtraction, and Division operations using a single object.
 
